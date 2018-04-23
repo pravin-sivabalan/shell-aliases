@@ -1,2 +1,2 @@
-# Shell Aliases
+# hi
 hi
