@@ -11,6 +11,12 @@ qc() {
 	git commit -m $1
 }
 
+# NEW BRANCH: Checkout new branch
+# Example: gc new-branch
+gc() {
+	git checkout -b $1
+}
+
 # Push branch (In Progress)
 push() {
   output=$(git push 2>&1)
