@@ -14,9 +14,12 @@ qc() {
 # Push branch (In Progress)
 push() {
   output=$(git push 2>&1)
-  if [[ $output = *"has no upstream"* ]]; then
+  if [[ $output = *"has no upstream"* ]]
+	then
         export branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
         git push --set-upstream origin $branch
+	else
+				echo $output
   fi
 }
 
